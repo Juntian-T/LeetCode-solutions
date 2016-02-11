@@ -3,6 +3,13 @@ package solutions;
 import java.util.ArrayList;
 import java.util.Stack;
 
+/** 
+ * Given a binary tree, find its maximum depth.
+ * 
+ * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ * @author JT
+ *
+ */
 public class Q104_MaxDepth {
 
 
@@ -18,7 +25,8 @@ public class Q104_MaxDepth {
 		return Math.max(1 + maxDepth(root.left), 1 + maxDepth(root.right));
 	}
 
-	//Or could we use a stack, DFS?
+	//Or could we use a stack, DFS? 
+	//Not working at this moment
 	public int maxDepth2(TreeNode root) {
 		Stack<TreeNode> s = new Stack<TreeNode>();
 		ArrayList<TreeNode> visited = new ArrayList<TreeNode>(); 

@@ -1,5 +1,23 @@
 package solutions;
 
+
+/**
+ * Invert a binary tree.
+
+	     4
+	   /   \
+	  2     7
+	 / \   / \
+	1   3 6   9
+to
+	     4
+	   /   \
+	  7     2
+	 / \   / \
+	9   6 3   1
+ * @author JT
+ *
+ */
 public class Q226_InvertBinaryTree {
 
 	//Didn't know how to deal with the return value here, so my first approach was
@@ -27,7 +45,7 @@ public class Q226_InvertBinaryTree {
     
     
     //Apparently I was doing extra work above, so here is the new implementation
-    //Note in the one above: I did the work and the recurse, but this one let the recursion do the work
+    //Note in the one above: I did the work and the recurse, but this one lets the recursion do the work
     public TreeNode invertTree2(TreeNode root) {
     	if (root == null) {
     		return null;

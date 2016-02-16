@@ -25,6 +25,8 @@ public class Q171_ExcelSheetColumnNumber {
 			result = result * 26 + s.charAt(i) - 64;
 		}
 
+		
+		
 		return result;
 	}
 

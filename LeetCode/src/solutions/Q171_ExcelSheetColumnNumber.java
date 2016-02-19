@@ -24,14 +24,11 @@ public class Q171_ExcelSheetColumnNumber {
 		for (int i = 0; i < s.length(); i++) {
 			result = result * 26 + s.charAt(i) - 64;
 		}
-
-		
-		
 		return result;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 	}
 

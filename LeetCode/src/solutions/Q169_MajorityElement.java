@@ -21,15 +21,15 @@ public class Q169_MajorityElement {
 				hm.put(i, 1);
 			} else {
 				hm.put(i, hm.get(i) + 1);
-				if (hm.get(i) > nums.length / 2) {
-					result = i;
-					break;
-				}
+			}
+			if (hm.get(i) > nums.length / 2) {
+				result = i;
+				break;
 			}
 		}
 		return result;
 	}
-	
+
 	//Another approach, O(nlogn) time
 	public int majorityElement2(int[] nums) {
 		Arrays.sort(nums);
@@ -37,9 +37,9 @@ public class Q169_MajorityElement {
 	}
 
 	public static void main(String[] args) {
-		int[] test = {1, 2, 3, 4, 2, 2, 2, 2};
+		int[] test = {1};
 		Q169_MajorityElement q = new Q169_MajorityElement();
-		System.out.println(q.majorityElement2(test));
+		System.out.println(q.majorityElement(test));
 	}
 
 }

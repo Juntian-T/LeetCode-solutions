@@ -1,0 +1,27 @@
+package solutions;
+
+import java.util.Arrays;
+
+public class Q108_ArrayToBST {
+	
+	//recursive implementation
+	//However, this implementation costs extra memory as it uses Array.copyOfRange 
+	public TreeNode sortedArrayToBST(int[] nums) {
+		if (nums.length == 0 ) {
+			return null;
+		}
+		if (nums.length == 1) {
+			return new TreeNode(nums[0]);
+		}
+		TreeNode root = new TreeNode(nums[nums.length/2]);
+		root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, nums.length/2));
+		root.right = sortedArrayToBST(Arrays.copyOfRange(nums, nums.length/2 + 1, nums.length));
+		return root;
+	}
+	
+	public static void main(String[] args) {
+		Q108_ArrayToBST q = new Q108_ArrayToBST();
+		int[] nums = {1, 2 , 3, 4, 5};
+		q.sortedArrayToBST(nums);
+	}
+}
